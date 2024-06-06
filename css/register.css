@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    width: 100%;   
+}
+
+.container {
+    position: relative;
+    top: 90px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 100px;
+    width: 30%; 
+    height: 500px;
+    transition: box-shadow 1000s ease-in-out;
+}
+
+.login-area {
+    text-align: center;
+    border: 1px beige;
+}
+
+input {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 40px;
+    border: 0.5px;
+    border-color: antiquewhite;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+select {
+    background-color: white;
+    border-radius: 10px;
+    width: 80px;
+    transition: 300ms;
+}
+
+select:hover {
+    width: 85px;
+}
+
+input:hover {
+    width: 320px;
+}
+
+button {
+    background-color: beige;
+    color: black;
+    margin-top: 10px;
+    border: 0;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: aliceblue;
+    color: brown;
+    width: 270px;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.text-area {
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+.footer {
+    background-color: antiquewhite;
+    height:60px;
+    margin-top: 190px;
+    text-align: center;
+    align-content: center;
+}
+
+h5 {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: 400ms;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: coral;
+}

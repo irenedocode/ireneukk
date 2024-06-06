@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url(https://images.unsplash.com/photo-1559756006-50e8ad67170d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.header, .footer {
+    font-size: x-large;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    margin-top: -150px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.text-section, .form-box {
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: brightness(100%) blur(15px);
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.text-section {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.text-section h2 {
+    font-size: 4em;
+}
+
+.text-section p {
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+.form-box {
+    color: #fff;
+}
+
+.form-box h2 {
+    text-align: center;
+    font-size: 4.5em;
+    margin-bottom: 20px;
+}
+
+.inputbox {
+    position: relative;
+    margin: 20px 0px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    padding: 0 5px;
+    color: #fff;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -15px;
+    font-size: 1em;
+    color: #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 3em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: #000;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+
+.register {
+    font-size: 1.6em;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}

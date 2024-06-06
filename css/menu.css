@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header, .footer {
+    font-size: x-large;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.logout-icon {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hotel-types {
+    position: relative;
+    left: -50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hotel-type {
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hotel-type:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-type h2 {
+    font-size: xx-large;
+    margin-top: 0;
+    color: #000;
+}
+
+.hotel-type p {
+    font-size: x-large;
+    color: #555;
+}
+
+button {
+    font-size: medium;
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

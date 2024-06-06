@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    overflow-y: hidden;
+    background-color: aliceblue;
+}
+
+section {
+    display: flex;
+    width: 100%;   
+}
+
+.container {
+    padding: 10px;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 180px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 50%;
+    height: 300px;
+    transition: box-shadow 1000s ease-in-out;
+}
+
+.login-area {
+    text-align: center;
+    border: 1px beige;
+}
+
+input{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-color: antiquewhite;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+input:hover{
+    border: none;
+    width: 270px;
+}
+
+button {
+    background-color: beige;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: aliceblue;
+    color: brown;
+    width: 270px;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.text-area {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+h1 {
+    margin-right: 20px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.footer {
+    background-color: antiquewhite;
+    height:60px;
+    margin-top: 175px;
+    text-align: center;
+    align-content: center;
+}
+
+h7 {
+    text-align: center;
+}
+
+h5 {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: 400ms;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: coral;
+}
+

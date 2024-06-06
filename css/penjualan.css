@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-y: hidden;
+    background-color: aliceblue;
+} 
+
+section {
+    display: flex;
+    width: 100%;   
+}
+
+.container {
+    border-radius: 50px;
+    position: relative;
+    left: 400px;
+    margin-top: 180px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 50%;
+    height: 300px;
+    transition: box-shadow 1000s ease-in-out;
+}
+
+.login-area {
+    text-align: center;
+    border: 1px beige;
+}
+
+input{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-color: antiquewhite;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+input:hover{
+    border: none;
+    width: 270px;
+}
+
+button {
+    background-color: beige;
+    border: none;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: aliceblue;
+    color: brown;
+    width: 270px;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.text-area {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+h1 {
+    margin-right: 20px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.footer {
+    background-color: antiquewhite;
+    height:60px;
+    margin-top: 190px;
+    text-align: center;
+    align-content: center;
+}
+
+h7 {
+    text-align: center;
+}
