@@ -20,20 +20,15 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'Admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Item List</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-    <div class="sidebar">
-        <a href="#home">Dashboard</a>
-        <a class="active" href="#news">Item List</a>
-        <a href="#contact">Employee List</a>
-        <a href="#about">Customer List</a>
-    </div>
-</header>
+    <?php
+        include "../elements/sidebar.php";
+    ?>
 <body>
-    <div class="container">
+    <div class="containers">
         <div class="button-add">
-            <a href="add_item.php">Add Item</a>
+            <a href="add.php">Add Item</a>
         </div>
         <table class="table">
             <thead>
@@ -61,8 +56,8 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'Admin') {
                         <td>{$row['ItemDetail']}</td>
                         <td>{$row['Handler']}</td>
                         <td>
-                            <a href='edit_item.php?id={$row['ItemNumber']}'>Edit</a> |
-                            <a href='delete_item.php?id={$row['ItemNumber']}'>Delete</a>
+                            <a class='editdelete-btn' href='edit.php?id={$row['ItemNumber']}'>Edit</a> |
+                            <a class='editdelete-btn' href='crud/delete.php?id={$row['ItemNumber']}'>Delete</a>
                         </td>
                     </tr>";
                 }
@@ -71,7 +66,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'Admin') {
         </table>
     </div>
 </body>
-<footer>
-    
-</footer>
+<?php
+include "../elements/footer.php";
+?>
 </html>

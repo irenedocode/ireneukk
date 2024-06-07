@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    background-color: aliceblue;
+}
+
+.sidebar {
+  background-color: antiquewhite;
+  width: 200px;
+  padding-top: 20px;
+  margin-top: -100px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+  .container {
+    position: relative;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    width: 30%; 
+    height: 440px;
+    transition: box-shadow 1000s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+
+  .containers {
+    padding: 15px;
+    position: relative;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    width: 60%; 
+    height: 440px;
+    transition: box-shadow 1000s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+
+  .login-area {
+    text-align: center;
+    border: 1px beige;
+}
+
+input {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 40px;
+  border: 0.5px solid antiquewhite;
+  border-radius: 100px;
+  transition: all 300ms ease;
+}
+
+select {
+    background-color: white;
+    border-radius: 10px;
+    width: 80px;
+    transition: 300ms;
+}
+
+select:hover {
+    width: 85px;
+}
+
+input:hover {
+    width: 320px;
+}
+
+button {
+    background-color: beige;
+    color: black;
+    margin-top: 20px;
+    border: 0;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: aliceblue;
+    color: brown;
+    width: 270px;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.text-area {
+    margin-left: 20px;
+}
+
+h1 {
+    position: relative;
+    top: 30px;
+    font-size: x-large;
+    text-align: center;
+}
+
+h5 {
+    margin-right: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: coral;
+}
+
+  table {
+    padding: 100px;
+    margin-left: 10%;
+    text-align: center;
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  table th {
+    background-color: aliceblue;
+    padding: 15px; 
+    border: 0.5px solid rgb(214, 231, 246);
+  }
+
+  table td {
+    padding: 15px; 
+    border: 0.5px solid rgb(214, 231, 246);
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: rgb(236, 224, 202);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgb(237, 222, 203);
+  }
+
+  .button-add {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    width: 75px;
+    color: blanchedalmond;
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 300ms;
+}
+
+  .button-add:hover {
+    background-color: whitesmoke;
+    color: azure;
+    text-decoration: none;
+}
+
+.editdelete-btn {
+  text-decoration: none;
+  color: rgb(25, 26, 27);
+  transition: 300ms;
+}
+
+.editdelete-btn:hover {
+  width: 10px;
+  text-decoration: underline;
+  
+}
+  
+

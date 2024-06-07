@@ -72,9 +72,7 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 </body>
-<footer>
-    <div class="footer">
-        <h7>Copyright Irene. Made with &hearts;</h7>
-    </div>
-</footer>
+<?php
+include "elements/footer.php";
+?>
 </html>
