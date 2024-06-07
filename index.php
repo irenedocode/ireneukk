@@ -1,48 +1,42 @@
 <?php
 session_start();
-
 include "koneksi.php";
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $ambilrole = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
+    $ambilrole = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
     $hitung = mysqli_num_rows($ambilrole);
-    $role = mysqli_fetch_assoc($ambilrole);
 
     if ($hitung == 1) {
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = $role['role'];
+        $role = mysqli_fetch_assoc($ambilrole);
+        
+            $_SESSION['username'] = $username;
+            $_SESSION['role'] = $role['role'];
 
-        if ($role['role'] == "Admin") {
-            echo "
-            <script>
-            window.location.href = 'admin';
-            </script>";
-        } elseif ($role['role'] == "Petugas") {
-            echo "
-            <script>
-            window.location.href = 'petugas';
-            </script>";
-        } elseif ($role['role'] == "User") {
-            echo "
-            <script>
-            window.location.href = 'user';
-            </script>";
-        } else {
-            echo "
-            <script>
-            alert('Username or password not found');
-            window.location.href = 'index.php';
-            </script>";
+            switch ($role['role']) {
+                case 'Admin':
+                    header("Location: admin/index.php");
+                    exit();
+                case 'Petugas':
+                    header("Location: petugas/index.php");
+                    exit();
+                case 'User':
+                    header("Location: user/index.php");
+                    exit();
+                default:
+                    echo "<script>
+                          alert('Role not recognized.');
+                          window.location.href = 'index.php';
+                          </script>";
+            
         }
     } else {
-        echo "
-        <script>
-        alert('Username or password not found');
-        window.location.href = 'index.php';
-        </script>";
+        echo "<script>
+              alert('Username not found.');
+              window.location.href = 'index.php';
+              </script>";
     }
 }
 ?>
@@ -54,7 +48,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="container">
@@ -72,7 +66,5 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 </body>
-<?php
-include "elements/footer.php";
-?>
+<?php include "elements/footer.php"; ?>
 </html>

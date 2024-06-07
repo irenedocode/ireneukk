@@ -84,8 +84,7 @@ input {
 
 select {
     background-color: white;
-    border-radius: 10px;
-    width: 80px;
+    width: 200px;
     transition: 300ms;
 }
 

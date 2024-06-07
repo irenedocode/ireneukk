@@ -3,15 +3,16 @@ session_start();
 
 include "../koneksi.php";
 
-
-if (!isset($_SESSION['username']) || $_SESSION['role'] != 'Admin') {
+if (empty($_SESSION['username']) || !in_array($_SESSION['role'], ['Admin'])) {
     echo "
-    <script>
-    alert('You are not authorized to access this page');
-    window.location.href = '../index.php';
-    </script>";
+        <script>
+        alert('You are not authorized to access this page.');
+        window.location.href = '../index.php';
+        </script>
+        ";
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>

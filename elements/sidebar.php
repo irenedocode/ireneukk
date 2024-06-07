@@ -14,17 +14,15 @@ align-content: center;
   color: black;
   padding: 10px;
   text-decoration: none;
+  transition: 500ms;
 }
 
-.sidebar a.active {
+.sidebar a:hover {
+  text-align: center;
   background-color: #4CAF50;
   color: white;
 }
 
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
 </style>
 
 <header>
@@ -32,5 +30,6 @@ align-content: center;
         <a href="index.php">Item List</a>
         <a href="#contact">Employee List</a>
         <a href="#about">Customer List</a>
+        <a href="../logout.php">Logout</a>
     </div>
 </header>

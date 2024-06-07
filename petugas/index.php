@@ -1,7 +1,8 @@
 <?php
+
 session_start();
 
-if (empty($_SESSION['username']) || !in_array($_SESSION['role'], ['Admin', 'Petugas'])) {
+if (empty($_SESSION['username']) || !in_array($_SESSION['role'], ['Petugas'])) {
     echo "
         <script>
         alert('You are not authorized to access this page.');
@@ -11,7 +12,7 @@ if (empty($_SESSION['username']) || !in_array($_SESSION['role'], ['Admin', 'Petu
     exit();
 }
 
-include "koneksi.php";
+include "../koneksi.php";
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -42,13 +43,25 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+<?php
+        include "../elements/sidebar.php";
+    ?>
 <body>
     <section class="container">
         <div class="login-area">
-            <h1> REGISTER </h1>
+            <h1> KASIR </h1><br>
+            <select name="ItemName" id="ItemName"><br>
+            <?php
+                $query = "SELECT * FROM daftar_barang";
+                $result = mysqli_query($koneksi, $query);
+                ?>
+                <option value=>;</option>
+                <option value="Petugas">Petugas</option>
+                <option value="User">User</option>
+            </select>  <br>
             <form action="" method="post">
             <input name="username" type="text" placeholder="Username"> <br>
             <input name="password" type="password" placeholder="Password"> <br>
@@ -66,9 +79,7 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 </body>
-<footer>
-    <div class="footer">
-        <h7>Copyright Irene. Made with &hearts;</h7>
-    </div>
-</footer>
+<?php
+include "../elements/footer.php";
+?>
 </html>
